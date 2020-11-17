@@ -6,6 +6,7 @@ class AboutPage extends React.Component {
         <>
         <h2>About</h2>
         <p>This app  uses React.</p>
+        <a href="/home">home</a>
         </>)
     }
 } 
