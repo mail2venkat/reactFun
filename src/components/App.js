@@ -5,7 +5,10 @@ import AboutPage from "./AboutPage";
 import CoursesPage from "./coursesPage";
 import NotFoundPage from "./NotFoundPage";
 import ManageCoursePage from "./manageCoursePage";
+import { ToastContainer } from "react-toastify";
 import { Route, Switch } from "react-router-dom";
+
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   // function getPage() {
@@ -16,6 +19,7 @@ function App() {
   // }
   return (
     <div className="container-fluid">
+      <ToastContainer autoClose={3000} hideProgressBar />
       <Header />
       <Switch>
         <Route path="/" exact component={HomePage} />
@@ -23,6 +27,7 @@ function App() {
         <Route path="/courses" component={CoursesPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/course/:slug" component={ManageCoursePage} />
+        <Route path="/course" component={ManageCoursePage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
